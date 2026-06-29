@@ -11,8 +11,8 @@ function initGame() {
     // Случайным образом выбираем сундук с деньгами (1, 2 или 3)
 
     moneyChest = Math.floor(Math.random() * 3) + 1;
-    console.log(moneyChest)
-z.innerHTML=`игра Сундуки{moneyChest}`
+   
+z.innerHTML=`игра Сундуки`
     gameActive = true;
 
     document.getElementById('result').textContent = '';
