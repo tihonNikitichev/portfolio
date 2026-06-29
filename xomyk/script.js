@@ -26,12 +26,12 @@ function peep() {
     const time = Math.round(Math.random() * (1200 - 600) + 600);
     const hole = randomHole(holes);
 
-    hole.textContent = '🍣'; // Сажаем хомяка в норку
+    hole.textContent = '🐹'; // Сажаем хомяка в норку
     hole.classList.add('has-mole'); // Помечаем, что тут есть хомяка
 
     // Через заданное время прячем хомяка
     moleTimer = setTimeout(() => {
-        if (hole.textContent === '🍣') {
+        if (hole.textContent === '🐹') {
             hole.textContent = ''; // Прячем хомяка, если его не поймали
         }
         hole.classList.remove('has-mole');
