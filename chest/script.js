@@ -12,7 +12,7 @@ function initGame() {
 
     moneyChest = Math.floor(Math.random() * 3) + 1;
     console.log(moneyChest)
-z.innerHTML=`игра Сундуки${moneyChest}`
+z.innerHTML=`игра Сундуки{moneyChest}`
     gameActive = true;
 
     document.getElementById('result').textContent = '';
