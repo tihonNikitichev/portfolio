@@ -1,0 +1,173 @@
+/* Общие настройки */
+:root {
+  --bg-color: #121212;          /* почти чёрный фон */
+  --card-bg: #1e1e1e;           /* фон для секций/карточек */
+  --text-main: #e0e0e0;         /* основной текст (светло‑серый) */
+  --text-secondary: #a0a0a0;    /* второстепенный текст */
+  --accent: #bb86fc;            /* акцентный цвет (фиолетово‑лавандовый) */
+  --accent-hover: #9d5ccc;      /* акцент при наведении */
+  --border-color: #333333;      /* цвет границ */
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-main);
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+}
+
+/* Шапка */
+header {
+  text-align: center;
+  padding: 2rem 1rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+header h1 {
+  margin-bottom: 1.5rem;
+  font-size: 2.5rem;
+  letter-spacing: 2px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: var(--text-main);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: var(--accent);
+}
+
+/* Секции */
+section {
+  padding: 3rem 1.5rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+section + section {
+  border-top: 1px solid var(--border-color);
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: var(--accent);
+  border-bottom: 2px solid var(--border-color);
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+p {
+  color: var(--text-secondary);
+  margin-bottom: 1rem;
+}
+
+/* Фото профиля */
+.profile-photo {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid var(--accent);
+  margin-top: 1rem;
+}
+
+/* Проекты */
+.project {
+  background-color: var(--card-bg);
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 12px rgba(187, 134, 252, 0.15);
+}
+
+.project img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+  margin: 1rem 0;
+  filter: brightness(0.9);
+}
+
+.project h3 {
+  color: var(--text-main);
+  margin-bottom: 0.5rem;
+}
+
+.project-link {
+  display: inline-block;
+  margin-top: 0.8rem;
+  color: var(--accent);
+  text-decoration: underline;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.project-link:hover {
+  color: var(--accent-hover);
+}
+
+/* Навыки — список */
+#skills ul {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 1rem;
+}
+
+#skills li {
+  background: var(--card-bg);
+  padding: 0.7rem 1rem;
+  border-radius: 6px;
+  text-align: center;
+  border: 1px solid var(--border-color);
+  color: var(--text-main);
+}
+
+/* Контакты */
+#contact p {
+  color: var(--text-secondary);
+}
+
+/* Подвал */
+footer {
+  text-align: center;
+  padding: 2rem;
+  background-color: #0d0d0d;
+  color: var(--text-secondary);
+  border-top: 1px solid var(--border-color);
+}
+
+/* Адаптивность под мобильные */
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 2rem;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}

@@ -1,0 +1,119 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Trebuchet MS', sans-serif;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+              url('https://example.com/pirate-ship.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: #f0e6d2;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  text-align: center;
+  background: rgba(60, 45, 30, 0.8);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+  max-width: 600px;
+  width: 90%;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.6);
+  color: #ffd700;
+}
+
+p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  line-height: 1.5;
+}
+
+.chests {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+  margin: 40px 0;
+}
+
+.chest {
+  width: 120px;
+  height: 100px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.chest:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+.chest img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#result {
+  margin: 30px 0;
+  font-size: 1.5rem;
+  font-weight: bold;
+  min-height: 40px;
+}
+
+button {
+  background: #8b4513;
+  color: #f0e6d2;
+  border: none;
+  padding: 12px 30px;
+  font-size: 1.1rem;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+button:hover {
+  background: #a0522d;
+  transform: scale(1.05);
+}
+
+/* Анимация открытия сундука */
+.open {
+  transform: rotateX(90deg) translateY(50px) !important;
+  opacity: 0.7;
+}
+
+/* Стили для сообщений */
+.win {
+  color: #32cd32;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.lose {
+  color: #ff4500;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+body {
+  font-family: 'Trebuchet MS', sans-serif;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+            url('https://images.unsplash.com/photo-123456789.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: #f0e6d2;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
